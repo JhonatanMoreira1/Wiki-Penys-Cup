@@ -16,4 +16,4 @@
 - **HTML5**: Estruturação da página.
 - **SASS**: Estilização da página para um design atrativo.
 - **JavaScript**: Funcionalidades interativas básicas.<br><br><br>
-  Inspirado em: https://gta.fandom.com/pt/wiki/Carl_Johnson
+  > Inspirado em: https://gta.fandom.com/pt/wiki/Carl_Johnson
