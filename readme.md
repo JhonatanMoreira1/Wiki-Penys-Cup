@@ -17,4 +17,6 @@
 - **SASS**: Estilização da página para um design atrativo.
 - **JavaScript**: Funcionalidades interativas básicas.
 
+---
+
 Inspirado em: https://gta.fandom.com/pt/wiki/Carl_Johnson
