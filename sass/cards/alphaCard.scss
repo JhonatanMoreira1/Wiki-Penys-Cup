@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Aubrey&family=Cinzel:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #10151f;
+}
+
+.card {
+  background: linear-gradient(
+    to right,
+    #000000,
+    #000,
+    #000,
+    #030207,
+    #000,
+    #0d0a0a
+  );
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #585858;
+  border-radius: 5px;
+  padding: 30px;
+  width: 500px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(1fr, 10);
+  grid-template-rows: minmax(10px, auto);
+  gap: 15px 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: (0px 0px 15px 5px #e6e6e6);
+  // transition: 0.3s;
+}
+
+h1 {
+  color: #e6e6e6;
+  font-family: "Aubrey", system-ui;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+p {
+  color: #e6e6e6;
+  padding: 5px;
+}
+.row {
+  border: 1px dotted #101365;
+  background: linear-gradient(to right, #122240, #00000039, #2c303d);
+}
+
+.row1 {
+  grid-column: 1/10;
+  grid-row: 1;
+  height: 50px;
+  border-start-start-radius: 45px;
+  border-end-end-radius: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row2 {
+  background: #00000000;
+  border: 0px;
+  grid-column: 1/8;
+  grid-row: 2/5;
+  border-radius: 30px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  img {
+    z-index: 2;
+    max-width: 140%;
+    max-height: 100%;
+    filter: drop-shadow(10px 15px 10px rgba(0, 0, 0, 0.932));
+  }
+}
+.row3 {
+  grid-column: 7/10;
+  grid-row: 3/3;
+  border-start-end-radius: 30px;
+  border-end-end-radius: 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 17.2px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  z-index: 1;
+}
+.row4 {
+  display: flex;
+  align-items: center;
+  grid-column: 1/10;
+  grid-row: 5/9;
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
+}

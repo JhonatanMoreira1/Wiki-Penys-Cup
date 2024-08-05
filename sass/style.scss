@@ -1,0 +1,1278 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Codystar&family=Handlee&family=Hedvig+Letters+Serif:opsz@12..24&family=Marko+One&family=Montserrat:wght@400;600&family=Open+Sans:wght@800&family=Oswald:wght@200;500&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Codystar&family=Handlee&family=Hedvig+Letters+Serif:opsz@12..24&family=Marko+One&family=Montserrat:wght@400;600&family=Open+Sans:wght@800&family=Oswald:wght@200;500&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; // Adiciona essa linha
+}
+
+// header
+.header {
+  div {
+    background-color: #231d37;
+    width: 100%; // Altere para `width`
+    height: 80px;
+  }
+}
+.headerContent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    padding-top: 10px;
+    width: 100px;
+  }
+  h1 {
+    color: white;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    padding-top: 10px;
+  }
+}
+
+// main
+.main {
+  background-image: url(/pngs/bg/homeBg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.mainContent {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+.mainAlign {
+  display: flex;
+}
+
+.king {
+  width: auto;
+  height: 600px;
+  filter: drop-shadow(10px 15px 10px rgb(0, 0, 0));
+}
+.ranking {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card {
+  .h1 {
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+  }
+  color: white;
+  letter-spacing: 5px;
+  font-size: 27px;
+  font-family: rubik;
+  display: flex;
+  flex-direction: row;
+  gap: 0px 5px;
+}
+
+.crown {
+  width: auto;
+  height: 50px;
+  filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+}
+
+#atual-champion {
+  width: 470px;
+  img {
+    width: auto;
+    height: 55px;
+    padding: 0;
+    filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+  }
+  h1 {
+    font-family: rubik;
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
+    font-size: 45px;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ff0321, #8b7bff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: color 5s ease-in-out infinite;
+
+    @keyframes color {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+}
+
+.champion {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 340px;
+    padding-left: 75px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    filter: drop-shadow(10px 15px 10px rgb(0, 0, 0));
+  }
+}
+
+// footer
+.footer {
+  align-content: center;
+  background-color: #1b1b1b;
+  width: 100%; // Altere para `width`
+  height: 400px;
+}
+.footerContent {
+  display: grid;
+  justify-content: space-around;
+
+  grid-template-areas:
+    "card1 card2 card3 card4 card5"
+    "card6 card6 card6 card6 card6";
+}
+
+.footerSeparator {
+  height: 350px;
+  padding: 60px;
+}
+
+.footerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  h3 {
+    font-family: Montserrat;
+    color: #e2e2e2;
+    font-size: 20px;
+  }
+
+  p {
+    font-family: Marko One;
+    color: #858585;
+    font-size: 15px;
+  }
+
+  a {
+    font-family: Marko One;
+    color: #858585;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: #858585;
+    text-underline-offset: 1px;
+  }
+}
+
+.card1 {
+  grid-area: card1;
+  img {
+    width: 150px;
+  }
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card4 {
+  grid-area: card4;
+  text-align: center;
+}
+
+.card5 {
+  grid-area: card5;
+  text-align: center;
+
+  img {
+    width: 100px;
+  }
+}
+.card6 {
+  grid-area: card6;
+  padding: 0;
+  padding-left: 10px;
+  p {
+    padding: 0;
+    font-family: Open Sans;
+    font-size: 15px;
+    color: #858585;
+  }
+}
+
+.about {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: darkgray;
+}
+
+// RESPONSIVIDADE
+
+// 110%
+@media (max-width: 110em) {
+  // header
+  .header {
+    height: 73px;
+  }
+  .headerContent {
+    img {
+      width: 92px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 32px;
+      padding-top: 0px;
+    }
+  }
+
+  //Main
+  .mainContent {
+    .king {
+      height: 550px;
+    }
+    .card {
+      font-size: 25px;
+    }
+    .crown {
+      height: 45px;
+    }
+    #atual-champion {
+      h1 {
+        font-size: 40px;
+      }
+      img {
+        height: 50px;
+      }
+    }
+    .champion {
+      img {
+        width: 320px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 350px;
+    .footerCard {
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+    .footerSeparator {
+      // border: 2px solid red;
+      height: 300px;
+    }
+    .card1 {
+      img {
+        width: 140px;
+      }
+    }
+    .card5 {
+      img {
+        width: 90px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+//125%
+@media (max-width: 100em) {
+  // header
+  .header {
+    height: 65px;
+  }
+  .headerContent {
+    img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 28px;
+      padding-top: 0px;
+      line-height: 0.5;
+    }
+  }
+
+  //Main
+  .mainContent {
+    .king {
+      height: 500px;
+    }
+    .card {
+      font-size: 20px;
+    }
+    .crown {
+      height: 40px;
+    }
+    #atual-champion {
+      h1 {
+        font-size: 35px;
+      }
+      img {
+        height: 50px;
+      }
+    }
+    .champion {
+      img {
+        width: 300px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 320px;
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .footerSeparator {
+      height: 280px;
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// 133%
+@media (max-width: 90em) {
+  // header
+  .header {
+    height: 60px;
+  }
+  .headerContent {
+    img {
+      width: 75px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 25px;
+      padding-top: 0px;
+    }
+  }
+
+  //Main
+  .mainContent {
+    .king {
+      height: 480px;
+    }
+    .card {
+      font-size: 20px;
+    }
+    .crown {
+      height: 40px;
+    }
+    #atual-champion {
+      h1 {
+        font-size: 35px;
+      }
+      img {
+        height: 50px;
+      }
+    }
+    .champion {
+      img {
+        width: 250px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// 140%
+@media (max-width: 95em) {
+  // header
+  .header {
+    height: 60px;
+  }
+  .headerContent {
+    img {
+      width: 75px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 25px;
+      padding-top: 0px;
+    }
+  }
+
+  //Main
+  .mainContent {
+    .king {
+      height: 450px;
+    }
+    .card {
+      font-size: 18px;
+    }
+    .crown {
+      height: 37px;
+    }
+    #atual-champion {
+      h1 {
+        font-size: 32px;
+      }
+      img {
+        height: 45px;
+      }
+    }
+    .champion {
+      img {
+        width: 250px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// 150%
+@media (max-width: 80em) {
+  // header
+  .header {
+    height: 60px;
+  }
+  .headerContent {
+    img {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 30px;
+      padding-top: 0px;
+    }
+  }
+  //Main
+  .mainContent {
+    .king {
+      height: 340px;
+    }
+    .card {
+      font-size: 15px;
+    }
+    .crown {
+      height: 30px;
+    }
+    #atual-champion {
+      h1 {
+        font-size: 30px;
+      }
+      img {
+        height: 40px;
+      }
+    }
+    .champion {
+      img {
+        width: 250px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 350px;
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .footerSeparator {
+      height: 300px;
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+    .footerSeparator {
+      height: 330px;
+    }
+  }
+}
+
+//175%
+@media (max-width: 70em) {
+  // header
+  .header {
+    height: 50px;
+  }
+  .headerContent {
+    img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 25px;
+      padding-top: 0px;
+    }
+  }
+  //Main
+  .mainContent {
+    .king {
+      height: 320px;
+    }
+    .card {
+      font-size: 15px;
+    }
+    .crown {
+      height: 30px;
+    }
+    #atual-champion {
+      h1 {
+        font-size: 30px;
+      }
+      img {
+        height: 40px;
+      }
+    }
+    .champion {
+      img {
+        width: 250px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 700px;
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .footerSeparator {
+      height: 650px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 50px 80px;
+      grid-template-areas:
+        "card6 card6"
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 70px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 10px;
+      }
+      position: absolute;
+      left: 0;
+      bottom: 1;
+    }
+  }
+}
+
+//200%
+@media (max-width: 60em) {
+  // header
+  .header {
+    height: 40px;
+  }
+  .headerContent {
+    img {
+      width: 40px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 20px;
+      padding-top: 0px;
+    }
+  }
+  //Main
+  .mainContent {
+    .king {
+      height: 270px;
+    }
+    .card {
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+    .crown {
+      height: 25px;
+    }
+    #atual-champion {
+      h1 {
+        font-size: 25px;
+      }
+      img {
+        height: 30px;
+      }
+    }
+    .champion {
+      img {
+        width: 200px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 500px;
+    .footerCard {
+      h3 {
+        font-size: 10px;
+      }
+      p {
+        font-size: 8px;
+      }
+      a {
+        font-size: 8px;
+      }
+    }
+    .footerSeparator {
+      height: 450px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 35px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 70px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 50px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 7px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+    .about {
+      text-underline-offset: 1px;
+    }
+  }
+}
+
+//250%
+@media (max-width: 50em) {
+  // header
+  .header {
+    height: 35px;
+  }
+  .headerContent {
+    img {
+      width: 30px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 17px;
+      padding-top: 0px;
+    }
+  }
+  //Main
+  .mainContent {
+    .king {
+      height: 240px;
+    }
+    .card {
+      flex-direction: column;
+      letter-spacing: 1px;
+      font-size: 13px;
+      filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    }
+    .crown {
+      height: auto;
+      width: 25px;
+    }
+    #atual-champion {
+      flex-direction: row;
+      h1 {
+        font-size: 23px;
+      }
+      img {
+        height: 28px;
+      }
+    }
+    .champion {
+      img {
+        width: 180px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 500px;
+    .footerCard {
+      h3 {
+        font-size: 9px;
+      }
+      p {
+        font-size: 7px;
+      }
+      a {
+        font-size: 7px;
+      }
+    }
+    .footerSeparator {
+      height: 450px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 35px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 60px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 40px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 6px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+}
+
+//300%
+@media (max-width: 40em) {
+  // header
+  .header {
+    height: 20px;
+  }
+  .headerContent {
+    height: 20px;
+    img {
+      width: 30px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 12px;
+    }
+  }
+  //Main
+
+  .main {
+    display: grid;
+    justify-content: center;
+  }
+  .mainContent {
+    padding-top: 20px;
+    justify-content: center;
+    // border: 2px solid red;
+    .king {
+      height: 170px;
+    }
+    .mainAlign {
+      width: 400px;
+      display: flex;
+      // border: 2px solid red;
+    }
+    .card {
+      width: 250px;
+      flex-direction: column;
+      letter-spacing: 1px;
+      font-size: 8px;
+      filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    }
+    .crown {
+      height: auto;
+      width: 20px;
+    }
+
+    #atual-champion {
+      width: 250px;
+      flex-direction: row;
+      h1 {
+        font-size: 15px;
+      }
+      img {
+        height: 20px;
+      }
+    }
+    .champion {
+      img {
+        width: 125px;
+        padding-left: 40px;
+        padding-top: 10px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 450px;
+    .footerCard {
+      h3 {
+        font-size: 7px;
+      }
+      p {
+        font-size: 5px;
+      }
+      a {
+        font-size: 5px;
+      }
+    }
+    .footerSeparator {
+      height: 400px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 35px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 50px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 35px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 5px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+}
+
+//400%
+@media (max-width: 30em) {
+  // header
+  .header {
+    height: 20px;
+  }
+  .headerContent {
+    height: 20px;
+    img {
+      width: 30px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 12px;
+    }
+  }
+  //Main
+
+  .main {
+    display: grid;
+    justify-content: center;
+  }
+  .mainContent {
+    padding-top: 15px;
+    justify-content: center;
+    // border: 2px solid red;
+    .king {
+      height: 200px;
+      padding-top: 50px;
+      padding-left: 10px;
+    }
+    .mainAlign {
+      width: 400px;
+      display: flex;
+      // border: 2px solid red;
+    }
+    .card {
+      padding-left: 35px;
+      gap: 0px;
+      width: 200px;
+      flex-direction: column;
+      letter-spacing: 1px;
+      font-size: 5px;
+      filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    }
+    #divisor1 {
+      padding-top: 20px;
+    }
+    .crown {
+      height: auto;
+      width: 10px;
+    }
+    .crowns {
+      width: 100px;
+    }
+    .ranking {
+      width: 200px;
+    }
+
+    #atual-champion {
+      padding: 0px;
+      width: 200px;
+      flex-direction: row;
+      h1 {
+        font-size: 10px;
+      }
+      img {
+        height: 15px;
+      }
+    }
+    .champion {
+      padding-left: 15px;
+      img {
+        width: 90px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 350px;
+    .footerCard {
+      h3 {
+        font-size: 6px;
+      }
+      p {
+        font-size: 4px;
+      }
+      a {
+        font-size: 4px;
+      }
+    }
+    .footerSeparator {
+      height: 300px;
+      padding: 0px;
+    }
+    .footerContent {
+      justify-content: space-evenly;
+      gap: 20px 0px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 40px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 25px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 4px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+}
+
+//500%
+@media (max-width: 25em) {
+  // header
+  .header {
+    height: 15px;
+  }
+  .headerContent {
+    height: 15px;
+    img {
+      width: 20px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 8px;
+    }
+  }
+  //Main
+
+  .main {
+    display: grid;
+    justify-content: center;
+  }
+  .mainContent {
+    justify-content: center;
+    padding-top: 15px;
+    // border: 2px solid red;
+    .king {
+      height: 150px;
+      padding-top: 50px;
+      padding-left: 10px;
+    }
+    .mainAlign {
+      width: 300px;
+      display: flex;
+      // border: 2px solid red;
+    }
+    .card {
+      padding-left: 35px;
+      gap: 0px;
+      width: 200px;
+      flex-direction: column;
+      letter-spacing: 1px;
+      font-size: 5px;
+      filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    }
+    #divisor1 {
+      padding-top: 20px;
+    }
+    .crown {
+      height: auto;
+      width: 10px;
+    }
+    .crowns {
+      width: 100px;
+    }
+    .ranking {
+      width: 200px;
+    }
+
+    #atual-champion {
+      padding: 0px;
+      width: 200px;
+      flex-direction: row;
+      h1 {
+        font-size: 10px;
+      }
+      img {
+        height: 15px;
+      }
+    }
+    .champion {
+      padding-left: 15px;
+      img {
+        width: 80px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  //footer
+  .footer {
+    height: 320px;
+    .footerCard {
+      h3 {
+        font-size: 5px;
+      }
+      p {
+        font-size: 3px;
+      }
+      a {
+        font-size: 3px;
+      }
+    }
+    .footerSeparator {
+      height: 280px;
+      padding: 0px;
+    }
+    .footerContent {
+      justify-content: space-evenly;
+      gap: 20px 0px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 30px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 15px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 3px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+}

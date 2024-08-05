@@ -1,0 +1,866 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Codystar&family=Handlee&family=Hedvig+Letters+Serif:opsz@12..24&family=Marko+One&family=Montserrat:wght@400;600&family=Open+Sans:wght@800&family=Oswald:wght@200;500&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  background: linear-gradient(45deg, #ffffff, rgba(182, 172, 255, 0.8862745098), rgb(255, 255, 255));
+}
+.header div img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45px;
+  margin: 15px;
+}
+.header div h1 {
+  font-family: Open Sans;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, #ffffff, rgba(182, 172, 255, 0.8862745098), rgb(124, 167, 202));
+  background-size: 300% 300%;
+  animation: color 9s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main label {
+  font-size: 35px;
+  margin-top: 70px;
+  font-family: Marko One;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+  100% {
+    background-position: 0, 50%;
+  }
+}
+.select {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  padding: 20px;
+}
+.select select {
+  padding-left: 70px;
+  font-size: 21px;
+  font-family: Open Sans;
+  text-shadow: 2px 2px 4px white;
+  border-radius: 20px;
+  width: 400px;
+  height: 70px;
+  border: 0px;
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+  background-size: 300% 300%;
+  animation: color 9s ease-in-out infinite;
+}
+.select select .option {
+  background-color: rgba(182, 172, 255, 0.8862745098);
+}
+.select button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+}
+.select img {
+  width: 120px;
+}
+
+#reportContent {
+  z-index: 2;
+  padding: 10px;
+  width: 1200px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 16px 14px 20px rgba(0, 0, 0, 0.5490196078);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reportContent ::-webkit-scrollbar-track-piece {
+  width: 20px;
+  background-color: rgba(0, 0, 0, 0.5490196078); /* Cor do fundo da barra de rolagem */
+  border-radius: 10px;
+}
+#reportContent ::-webkit-scrollbar {
+  width: 20px; /* Largura da barra de rolagem */
+}
+#reportContent ::-webkit-scrollbar-thumb {
+  background-color: rgba(79, 79, 79, 0.6274509804); /* Cor do "polegar" da barra de rolagem */
+  border-radius: 10px;
+}
+#reportContent ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(137, 137, 137, 0.6274509804); /* Cor do "polegar" da barra de rolagem ao passar o mouse */
+}
+
+#reportContent::before {
+  z-index: 1;
+  content: "";
+  background-image: conic-gradient(#ff0051 20deg, transparent 120deg);
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 3s linear infinite;
+  animation-timing-function: linear;
+}
+
+#reportContent::after {
+  z-index: 2;
+  content: "ㅤ";
+  padding: 10px;
+  color: white;
+  font-family: Open Sans;
+  container-type: text;
+  width: 1165px;
+  height: 565px;
+  background: #101010;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  /* justify-content: start; */
+  /* align-items: center; */
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.5490196078);
+}
+
+#reportContentText {
+  z-index: 1;
+  position: absolute;
+  padding: 15px;
+  left: 0;
+  top: 0;
+  margin-left: 20px;
+  color: white;
+  font-family: Marko One;
+}
+
+#textContainer {
+  z-index: 3;
+  padding: 10px;
+  width: 1165px;
+  height: 565px;
+  /* border-radius: 10px; */
+  border: 0px;
+  box-shadow: 16px 14px 20px rgba(0, 0, 0, 0.5490196078);
+  position: relative;
+  overflow: auto;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#removeButton {
+  z-index: 2;
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  border: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+}
+#removeButton img {
+  width: 40px;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Largura da barra de rolagem */
+}
+
+.footer {
+  align-content: center;
+  background-color: #1b1b1b;
+  width: 100%;
+  height: 400px;
+}
+
+.footerContent {
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas: "card1 card2 card3 card4 card5" "card6 card6 card6 card6 card6";
+}
+
+.footerSeparator {
+  height: 350px;
+  padding: 60px;
+}
+
+.footerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footerCard h3 {
+  font-family: Montserrat;
+  color: #e2e2e2;
+  font-size: 20px;
+}
+.footerCard p {
+  font-family: Marko One;
+  color: #858585;
+  font-size: 15px;
+}
+.footerCard a {
+  font-family: Marko One;
+  color: #858585;
+  text-decoration: none;
+}
+.footerCard a:hover {
+  text-decoration: underline;
+  text-decoration-color: #858585;
+  text-underline-offset: 1px;
+}
+
+.card1 {
+  grid-area: card1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card1 img {
+  width: 150px;
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card4 {
+  grid-area: card4;
+  text-align: center;
+}
+
+.card5 {
+  grid-area: card5;
+  text-align: center;
+}
+.card5 img {
+  width: 100px;
+}
+
+.card6 {
+  grid-area: card6;
+  padding: 0;
+  padding-left: 10px;
+}
+.card6 p {
+  padding: 0;
+  font-family: Open Sans;
+  font-size: 15px;
+  color: #858585;
+}
+
+.about {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: darkgray;
+}
+
+@media (max-width: 110em) {
+  .footer {
+    height: 350px;
+  }
+  .footer .footerCard h3 {
+    font-size: 16px;
+  }
+  .footer .footerCard p {
+    font-size: 14px;
+  }
+  .footer .footerCard a {
+    font-size: 14px;
+  }
+  .footer .footerSeparator {
+    height: 300px;
+  }
+  .footer .card1 img {
+    width: 140px;
+  }
+  .footer .card5 img {
+    width: 90px;
+  }
+  .footer .card6 {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .footer .card6 p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 100em) {
+  .footer {
+    height: 320px;
+  }
+  .footer .footerCard h3 {
+    font-size: 15px;
+  }
+  .footer .footerCard p {
+    font-size: 13px;
+  }
+  .footer .footerCard a {
+    font-size: 13px;
+  }
+  .footer .footerSeparator {
+    height: 280px;
+  }
+  .footer .card1 img {
+    width: 100px;
+  }
+  .footer .card5 img {
+    width: 70px;
+  }
+  .footer .card6 {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .footer .card6 p {
+    font-size: 12px;
+  }
+  .select select {
+    width: 300px;
+    padding-left: 20px;
+  }
+  #reportContent {
+    width: 800px;
+    height: 400px;
+  }
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+  #reportContent::after {
+    width: 765px;
+    height: 370px;
+  }
+  #reportContentText {
+    font-size: 13px;
+  }
+  #textContainer {
+    width: 765px;
+    height: 370px;
+  }
+}
+@media (max-width: 95em) {
+  .footer .footerCard h3 {
+    font-size: 15px;
+  }
+  .footer .footerCard p {
+    font-size: 13px;
+  }
+  .footer .footerCard a {
+    font-size: 13px;
+  }
+  .footer .card1 img {
+    width: 100px;
+  }
+  .footer .card5 img {
+    width: 70px;
+  }
+  .footer .card6 {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .footer .card6 p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 90em) {
+  .footer .footerCard h3 {
+    font-size: 15px;
+  }
+  .footer .footerCard p {
+    font-size: 13px;
+  }
+  .footer .footerCard a {
+    font-size: 13px;
+  }
+  .footer .card1 img {
+    width: 100px;
+  }
+  .footer .card5 img {
+    width: 70px;
+  }
+  .footer .card6 {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .footer .card6 p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 80em) {
+  .footer {
+    height: 350px;
+  }
+  .footer .footerCard h3 {
+    font-size: 15px;
+  }
+  .footer .footerCard p {
+    font-size: 13px;
+  }
+  .footer .footerCard a {
+    font-size: 13px;
+  }
+  .footer .footerSeparator {
+    height: 300px;
+  }
+  .footer .card1 img {
+    width: 100px;
+  }
+  .footer .card5 img {
+    width: 70px;
+  }
+  .footer .card6 {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .footer .card6 p {
+    font-size: 12px;
+  }
+  .footer .footerSeparator {
+    height: 330px;
+  }
+}
+@media (max-width: 70em) {
+  .footer {
+    height: 700px;
+    margin-top: 0;
+  }
+  .footer .footerCard h3 {
+    font-size: 15px;
+  }
+  .footer .footerCard p {
+    font-size: 13px;
+  }
+  .footer .footerCard a {
+    font-size: 13px;
+  }
+  .footer .footerSeparator {
+    height: 650px;
+    padding: 0px;
+  }
+  .footer .footerContent {
+    justify-content: space-evenly;
+    gap: 50px 80px;
+    grid-template-areas: "card6 card6" "card1 card2" "card4 card3" "card5 card5";
+  }
+  .footer .card1 img {
+    grid-area: card1;
+    width: 100px;
+  }
+  .footer .card5 img {
+    grid-area: card5;
+    width: 70px;
+  }
+  .footer .card6 {
+    position: absolute;
+    left: 0;
+    bottom: 1;
+  }
+  .footer .card6 p {
+    font-size: 10px;
+  }
+  .main {
+    min-height: 70vh;
+  }
+  .main label {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  .select select {
+    width: 230px;
+    padding-left: 20px;
+    font-size: 15px;
+  }
+  .select img {
+    width: 80px;
+  }
+  #reportContent {
+    width: 700px;
+    height: 450px;
+    margin-top: 2em;
+  }
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+  #reportContent::after {
+    width: 665px;
+    height: 420px;
+  }
+  #reportContentText {
+    font-size: 10px;
+  }
+  #textContainer {
+    width: 665px;
+    height: 420px;
+  }
+}
+@media (max-width: 60em) {
+  .footer {
+    height: 500px;
+  }
+  .footer .footerCard h3 {
+    font-size: 10px;
+  }
+  .footer .footerCard p {
+    font-size: 8px;
+  }
+  .footer .footerCard a {
+    font-size: 8px;
+  }
+  .footer .footerSeparator {
+    height: 450px;
+    padding: 0px;
+  }
+  .footer .footerContent {
+    justify-content: space-evenly;
+    gap: 35px;
+    grid-template-areas: "card1 card2" "card4 card3" "card5 card5";
+  }
+  .footer .card1 img {
+    grid-area: card1;
+    width: 70px;
+  }
+  .footer .card5 img {
+    grid-area: card5;
+    width: 50px;
+  }
+  .footer .card6 {
+    position: absolute;
+    left: 1;
+    bottom: 1;
+  }
+  .footer .card6 p {
+    font-size: 7px;
+  }
+  .footer .about {
+    text-underline-offset: 1px;
+  }
+}
+@media (max-width: 50em) {
+  .footer {
+    height: 520px;
+  }
+  .footer .footerCard h3 {
+    font-size: 11px;
+  }
+  .footer .footerCard p {
+    font-size: 9px;
+  }
+  .footer .footerCard a {
+    font-size: 9px;
+  }
+  .footer .footerSeparator {
+    height: 460px;
+    padding: 0px;
+  }
+  .footer .footerContent {
+    justify-content: space-evenly;
+    gap: 35px;
+    grid-template-areas: "card1 card2" "card4 card3" "card5 card5";
+  }
+  .footer .card1 img {
+    grid-area: card1;
+    width: 60px;
+  }
+  .footer .card5 img {
+    grid-area: card5;
+    width: 45px;
+  }
+  .footer .card6 {
+    position: absolute;
+    left: 1;
+    bottom: 1;
+  }
+  .footer .card6 p {
+    font-size: 6px;
+  }
+  .main label {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  .select select {
+    width: 230px;
+    padding-left: 20px;
+    font-size: 15px;
+  }
+  .select img {
+    width: 80px;
+  }
+  #reportContent {
+    width: 400px;
+    height: 600px;
+    margin-bottom: 10em;
+  }
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+  #reportContent::after {
+    width: 365px;
+    height: 565px;
+  }
+  #reportContentText {
+    font-size: 10px;
+  }
+  #textContainer {
+    width: 365px;
+    height: 565px;
+  }
+}
+@media (max-width: 40em) {
+  .footer {
+    height: 470px;
+  }
+  .footer .footerCard h3 {
+    font-size: 9px;
+  }
+  .footer .footerCard p {
+    font-size: 7px;
+  }
+  .footer .footerCard a {
+    font-size: 7px;
+  }
+  .footer .footerSeparator {
+    height: 420px;
+    padding: 0px;
+  }
+  .footer .footerContent {
+    justify-content: space-evenly;
+    gap: 35px;
+    grid-template-areas: "card1 card2" "card4 card3" "card5 card5";
+  }
+  .footer .card1 img {
+    grid-area: card1;
+    width: 50px;
+  }
+  .footer .card5 img {
+    grid-area: card5;
+    width: 35px;
+  }
+  .footer .card6 {
+    position: absolute;
+    left: 1;
+    bottom: 1;
+  }
+  .footer .card6 p {
+    font-size: 5px;
+  }
+}
+@media (max-width: 30em) {
+  .footer {
+    height: 430px;
+  }
+  .footer .footerCard h3 {
+    font-size: 8px;
+  }
+  .footer .footerCard p {
+    font-size: 7px;
+  }
+  .footer .footerCard a {
+    font-size: 7px;
+  }
+  .footer .footerSeparator {
+    height: 380px;
+    padding: 0px;
+  }
+  .footer .footerContent {
+    justify-content: space-evenly;
+    gap: 20px 0px;
+    grid-template-areas: "card1 card2" "card4 card3" "card5 card5";
+  }
+  .footer .card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .card1 img {
+    grid-area: card1;
+    width: 50px;
+  }
+  .footer .card5 img {
+    grid-area: card5;
+    width: 35px;
+  }
+  .footer .card6 {
+    position: absolute;
+    left: 1;
+    bottom: 1;
+  }
+  .footer .card6 p {
+    font-size: 4px;
+  }
+  .main {
+    min-height: 90vh;
+  }
+  .main label {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .select {
+    padding-left: 10px;
+  }
+  .select select {
+    width: 170px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 10px;
+  }
+  .select img {
+    width: 70px;
+  }
+  #reportContent {
+    width: 300px;
+    height: 500px;
+    margin-bottom: 10em;
+  }
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+  #reportContent::after {
+    width: 275px;
+    height: 475px;
+  }
+  #reportContentText {
+    font-size: 9px;
+  }
+  #textContainer {
+    width: 275px;
+    height: 475px;
+  }
+  .header div {
+    height: 40px;
+  }
+  .header div img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    margin: 10px;
+  }
+  .header div h1 {
+    font-size: 20px;
+    font-family: Open Sans;
+  }
+}
+@media (max-width: 25em) {
+  .footer {
+    height: 440px;
+  }
+  .footer .footerCard h3 {
+    font-size: 8px;
+  }
+  .footer .footerCard p {
+    font-size: 7px;
+  }
+  .footer .footerCard a {
+    font-size: 7px;
+  }
+  .footer .footerSeparator {
+    height: 390px;
+    padding: 0px;
+  }
+  .footer .footerContent {
+    justify-content: space-evenly;
+    gap: 20px 0px;
+    padding-top: 20px;
+    grid-template-areas: "card1 card2" "card4 card3" "card5 card5";
+  }
+  .footer .card1 img {
+    grid-area: card1;
+    width: 45px;
+  }
+  .footer .card5 img {
+    grid-area: card5;
+    width: 30px;
+  }
+  .footer .card6 {
+    position: absolute;
+    left: 1;
+    bottom: 1;
+  }
+  .footer .card6 p {
+    font-size: 3px;
+  }
+  .main label {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .select select {
+    width: 170px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 10px;
+  }
+  .select img {
+    width: 70px;
+  }
+  #reportContent {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 10em;
+  }
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+  #reportContent::after {
+    width: 275px;
+    height: 375px;
+  }
+  #reportContentText {
+    font-size: 9px;
+  }
+  #textContainer {
+    width: 280px;
+    height: 375px;
+  }
+  #removeButton img {
+    width: 25px;
+  }
+  .header div {
+    height: 40px;
+  }
+  .header div img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    margin: 10px;
+  }
+  .header div h1 {
+    font-size: 17px;
+    font-family: Open Sans;
+  }
+}
+
+/*# sourceMappingURL=reports.css.map */

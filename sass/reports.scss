@@ -1,0 +1,1037 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Codystar&family=Handlee&family=Hedvig+Letters+Serif:opsz@12..24&family=Marko+One&family=Montserrat:wght@400;600&family=Open+Sans:wght@800&family=Oswald:wght@200;500&family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background: linear-gradient(45deg, #ffffff, #b6acffe2, rgb(255, 255, 255));
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 45px;
+      margin: 15px;
+    }
+    h1 {
+      font-family: Open Sans;
+    }
+  }
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(45deg, #ffffff, #b6acffe2, rgb(124, 167, 202));
+  background-size: 300% 300%;
+  animation: color 9s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  label {
+    font-size: 35px;
+    margin-top: 70px;
+    font-family: Marko One;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+@keyframes color {
+  0% {
+    background-position: 0, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+  100% {
+    background-position: 0, 50%;
+  }
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  padding: 20px;
+  select {
+    padding-left: 70px;
+    font-size: 21px;
+    font-family: Open Sans;
+    text-shadow: 2px 2px 4px white;
+    border-radius: 20px;
+    width: 400px;
+    height: 70px;
+    border: 0px;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 9s ease-in-out infinite;
+
+    .option {
+      background-color: #b6acffe2;
+    }
+  }
+  button {
+    background-color: #00000000;
+    border: 0px;
+    // margin-top: 125px;
+    // margin-left: 0px;
+  }
+  img {
+    width: 120px;
+  }
+}
+
+#reportContent {
+  z-index: 2;
+  padding: 10px;
+  width: 1200px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 16px 14px 20px #0000008c;
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ::-webkit-scrollbar-track-piece {
+    width: 20px;
+    background-color: #0000008c; /* Cor do fundo da barra de rolagem */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 20px; /* Largura da barra de rolagem */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #4f4f4fa0; /* Cor do "polegar" da barra de rolagem */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #898989a0; /* Cor do "polegar" da barra de rolagem ao passar o mouse */
+  }
+}
+
+#reportContent::before {
+  z-index: 1;
+  content: "";
+  background-image: conic-gradient(#ff0051 20deg, transparent 120deg);
+  width: 150%;
+
+  height: 150%;
+  position: absolute;
+  animation: rotate 3s linear infinite;
+  animation-timing-function: linear;
+}
+#reportContent::after {
+  z-index: 2;
+  content: "ㅤ";
+  padding: 10px;
+  color: white;
+  font-family: Open Sans;
+  container-type: text;
+  width: 1165px;
+  height: 565px;
+  background: #101010;
+
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+
+  /* justify-content: start; */
+  /* align-items: center; */
+  box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+#reportContentText {
+  z-index: 1;
+  position: absolute;
+  padding: 15px;
+  left: 0;
+  top: 0;
+  margin-left: 20px;
+  color: white;
+  font-family: Marko One;
+}
+
+#textContainer {
+  //javascript
+  z-index: 3;
+  padding: 10px;
+  width: 1165px;
+  height: 565px;
+  /* border-radius: 10px; */
+  border: 0px;
+  box-shadow: 16px 14px 20px #0000008c;
+  position: relative;
+  overflow: auto;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#removeButton {
+  z-index: 2;
+  padding-right: 10px;
+  background-color: #00000000;
+  position: absolute;
+  border: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  img {
+    width: 40px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Largura da barra de rolagem */
+}
+
+// footer
+.footer {
+  align-content: center;
+  background-color: #1b1b1b;
+  width: 100%; // Altere para `width`
+  height: 400px;
+}
+.footerContent {
+  display: grid;
+  justify-content: space-around;
+
+  grid-template-areas:
+    "card1 card2 card3 card4 card5"
+    "card6 card6 card6 card6 card6";
+}
+
+.footerSeparator {
+  height: 350px;
+  padding: 60px;
+}
+
+.footerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  h3 {
+    font-family: Montserrat;
+    color: #e2e2e2;
+    font-size: 20px;
+  }
+
+  p {
+    font-family: Marko One;
+    color: #858585;
+    font-size: 15px;
+  }
+
+  a {
+    font-family: Marko One;
+    color: #858585;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: #858585;
+    text-underline-offset: 1px;
+  }
+}
+
+.card1 {
+  grid-area: card1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 150px;
+  }
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card4 {
+  grid-area: card4;
+  text-align: center;
+}
+
+.card5 {
+  grid-area: card5;
+  text-align: center;
+
+  img {
+    width: 100px;
+  }
+}
+.card6 {
+  grid-area: card6;
+  padding: 0;
+  padding-left: 10px;
+  p {
+    padding: 0;
+    font-family: Open Sans;
+    font-size: 15px;
+    color: #858585;
+  }
+}
+
+.about {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: darkgray;
+}
+
+// responsividade
+@media (max-width: 110em) {
+  //footer
+  .footer {
+    height: 350px;
+    .footerCard {
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+    .footerSeparator {
+      // border: 2px solid red;
+      height: 300px;
+    }
+    .card1 {
+      img {
+        width: 140px;
+      }
+    }
+    .card5 {
+      img {
+        width: 90px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 100em) {
+  //footer
+  .footer {
+    height: 320px;
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .footerSeparator {
+      height: 280px;
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .select {
+    select {
+      width: 300px;
+      padding-left: 20px;
+    }
+  }
+  #reportContent {
+    width: 800px;
+    height: 400px;
+  }
+
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+
+  #reportContent::after {
+    width: 765px;
+    height: 370px;
+  }
+
+  #reportContentText {
+    font-size: 13px;
+  }
+
+  #textContainer {
+    width: 765px;
+    height: 370px;
+  }
+}
+@media (max-width: 95em) {
+  //footer
+  .footer {
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 90em) {
+  //footer
+  .footer {
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 80em) {
+  //footer
+  .footer {
+    height: 350px;
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .footerSeparator {
+      height: 300px;
+    }
+    .card1 {
+      img {
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        width: 70px;
+      }
+    }
+    .card6 {
+      padding: 0;
+      padding-left: 10px;
+      p {
+        font-size: 12px;
+      }
+    }
+    .footerSeparator {
+      height: 330px;
+    }
+  }
+}
+@media (max-width: 70em) {
+  //footer
+  .footer {
+    height: 700px;
+    margin-top: 0;
+    .footerCard {
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .footerSeparator {
+      height: 650px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 50px 80px;
+      grid-template-areas:
+        "card6 card6"
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 100px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 70px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 10px;
+      }
+      position: absolute;
+      left: 0;
+      bottom: 1;
+    }
+  }
+
+  .main {
+    min-height: 70vh;
+    label {
+      font-size: 25px;
+      margin-top: 30px;
+    }
+  }
+  .select {
+    select {
+      width: 230px;
+      padding-left: 20px;
+      font-size: 15px;
+    }
+    img {
+      width: 80px;
+    }
+  }
+  #reportContent {
+    width: 700px;
+    height: 450px;
+    margin-top: 2em;
+  }
+
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+
+  #reportContent::after {
+    width: 665px;
+    height: 420px;
+  }
+
+  #reportContentText {
+    font-size: 10px;
+  }
+
+  #textContainer {
+    width: 665px;
+    height: 420px;
+  }
+}
+@media (max-width: 60em) {
+  //footer
+  .footer {
+    height: 500px;
+    .footerCard {
+      h3 {
+        font-size: 10px;
+      }
+      p {
+        font-size: 8px;
+      }
+      a {
+        font-size: 8px;
+      }
+    }
+    .footerSeparator {
+      height: 450px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 35px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 70px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 50px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 7px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+    .about {
+      text-underline-offset: 1px;
+    }
+  }
+}
+@media (max-width: 50em) {
+  //footer
+  .footer {
+    height: 520px;
+    .footerCard {
+      h3 {
+        font-size: 11px;
+      }
+      p {
+        font-size: 9px;
+      }
+      a {
+        font-size: 9px;
+      }
+    }
+    .footerSeparator {
+      height: 460px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 35px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 60px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 45px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 6px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+
+  .main {
+    label {
+      font-size: 25px;
+      margin-top: 30px;
+    }
+  }
+  .select {
+    select {
+      width: 230px;
+      padding-left: 20px;
+      font-size: 15px;
+    }
+    img {
+      width: 80px;
+    }
+  }
+  #reportContent {
+    width: 400px;
+    height: 600px;
+    margin-bottom: 10em;
+  }
+
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+
+  #reportContent::after {
+    width: 365px;
+    height: 565px;
+  }
+
+  #reportContentText {
+    font-size: 10px;
+  }
+
+  #textContainer {
+    width: 365px;
+    height: 565px;
+  }
+}
+@media (max-width: 40em) {
+  //footer
+  .footer {
+    height: 470px;
+    .footerCard {
+      h3 {
+        font-size: 9px;
+      }
+      p {
+        font-size: 7px;
+      }
+      a {
+        font-size: 7px;
+      }
+    }
+    .footerSeparator {
+      height: 420px;
+      padding: 0px;
+    }
+    .footerContent {
+      // border: 2px solid red;
+      justify-content: space-evenly;
+      gap: 35px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 50px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 35px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 5px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+}
+@media (max-width: 30em) {
+  //footer
+  .footer {
+    height: 430px;
+    .footerCard {
+      h3 {
+        font-size: 8px;
+      }
+      p {
+        font-size: 7px;
+      }
+      a {
+        font-size: 7px;
+      }
+    }
+    .footerSeparator {
+      height: 380px;
+      padding: 0px;
+    }
+    .footerContent {
+      justify-content: space-evenly;
+      gap: 20px 0px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        grid-area: card1;
+        width: 50px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 35px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 4px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+
+  .main {
+    min-height: 90vh;
+    label {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+  }
+  .select {
+    padding-left: 10px;
+    select {
+      width: 170px;
+      height: 50px;
+      padding-left: 20px;
+      font-size: 10px;
+    }
+    img {
+      width: 70px;
+    }
+  }
+  #reportContent {
+    width: 300px;
+    height: 500px;
+    margin-bottom: 10em;
+  }
+
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+
+  #reportContent::after {
+    width: 275px;
+    height: 475px;
+  }
+
+  #reportContentText {
+    font-size: 9px;
+  }
+
+  #textContainer {
+    width: 275px;
+    height: 475px;
+  }
+  .header {
+    div {
+      height: 40px;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        margin: 10px;
+      }
+      h1 {
+        font-size: 20px;
+        font-family: Open Sans;
+      }
+    }
+  }
+}
+@media (max-width: 25em) {
+  //footer
+  .footer {
+    height: 440px;
+    .footerCard {
+      h3 {
+        font-size: 8px;
+      }
+      p {
+        font-size: 7px;
+      }
+      a {
+        font-size: 7px;
+      }
+    }
+    .footerSeparator {
+      height: 390px;
+      padding: 0px;
+    }
+    .footerContent {
+      justify-content: space-evenly;
+      gap: 20px 0px;
+      padding-top: 20px;
+      grid-template-areas:
+        "card1 card2"
+        "card4 card3"
+        "card5 card5";
+    }
+    .card1 {
+      img {
+        grid-area: card1;
+        width: 45px;
+      }
+    }
+    .card5 {
+      img {
+        grid-area: card5;
+        width: 30px;
+      }
+    }
+    .card6 {
+      p {
+        font-size: 3px;
+      }
+      position: absolute;
+      left: 1;
+      bottom: 1;
+    }
+  }
+
+  .main {
+    label {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+  }
+  .select {
+    select {
+      width: 170px;
+      height: 50px;
+      padding-left: 20px;
+      font-size: 10px;
+    }
+    img {
+      width: 70px;
+    }
+  }
+  #reportContent {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 10em;
+  }
+
+  #reportContent::before {
+    width: 150%;
+    height: 150%;
+  }
+
+  #reportContent::after {
+    width: 275px;
+    height: 375px;
+  }
+
+  #reportContentText {
+    font-size: 9px;
+  }
+
+  #textContainer {
+    width: 280px;
+    height: 375px;
+  }
+  #removeButton {
+    img {
+      width: 25px;
+    }
+  }
+
+  .header {
+    div {
+      height: 40px;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        margin: 10px;
+      }
+      h1 {
+        font-size: 17px;
+        font-family: Open Sans;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "vincaslt.highlight-matching-tag",
+    "naumovs.color-highlight",
+    "adpyke.codesnap",
+    "miguelsolorio.min-theme",
+    "ms-ceintl.vscode-language-pack-pt-br",
+    "esbenp.prettier-vscode",
+    "miguelsolorio.symbols",
+    "ms-vscode-remote.remote-wsl"
+  ]
+}
