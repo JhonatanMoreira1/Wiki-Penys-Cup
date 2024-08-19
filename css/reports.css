@@ -78,6 +78,7 @@
 .select button {
   background-color: rgba(0, 0, 0, 0);
   border: 0px;
+  cursor: pointer;
 }
 .select img {
   width: 120px;
@@ -182,6 +183,7 @@
   right: 0;
   top: 0;
   margin-top: 20px;
+  cursor: pointer;
 }
 #removeButton img {
   width: 40px;
